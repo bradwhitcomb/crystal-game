@@ -1,0 +1,46 @@
+
+.row1{
+	height: 50px;
+	width:150px;
+	background-color:peru;
+}
+.instructions{
+	height:300px;
+	width:300px;
+	background-color: blue;
+}
+
+.col-md-3{
+	height:75px;
+	width:125px;
+	background-color: green;
+
+}
+.col-md-2{
+	height:75px;
+	width: 50px;
+	background-color: red;
+}
+.gems{
+	height:50px;
+	width: 100px;
+	background-color: yellow;
+	border:5px solid black;
+}
+.score{
+	width:200px;
+	height:25px;
+	background-color: black;
+}
+#incrementBox{
+	width:200px;
+	height:125px;
+	background-color: red;
+}
+
+
+
+
+
+
+
