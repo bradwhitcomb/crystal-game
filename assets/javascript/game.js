@@ -31,9 +31,21 @@ $(document).ready(function (){
 	}
 
 	var playGame = function(){
+		var wins = 0
+		var losses = 0 
 		$("#ruby").on("click",function(){
 			playerScore = playerScore + rubyNum;
 			console.log("Player Score is " + playerScore);	
+			if(playerScore === targetNum){
+				wins = wins + 1;
+				console.log("wins are " + wins);
+							
+			}
+			if (playerScore > targetNum){
+				losses = losses + 1;
+				console.log("losses are " + losses);
+				
+			}	
 		})
 
 		$("#diamond").on("click",function(){
@@ -51,6 +63,8 @@ $(document).ready(function (){
 			console.log("Player score is " + playerScore);
 		})
 
+		
+		
 	}	
 
 	
@@ -60,5 +74,6 @@ $(document).ready(function (){
 
 newGame();
 playGame();
+
 
 });
