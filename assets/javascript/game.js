@@ -39,35 +39,84 @@ $(document).ready(function (){
 			if(playerScore === targetNum){
 				wins = wins + 1;
 				console.log("wins are " + wins);
+				resetGame();
+				newGame();
 							
 			}
 			if (playerScore > targetNum){
 				losses = losses + 1;
 				console.log("losses are " + losses);
-				
+				resetGame();
+				newGame();
 			}	
+
 		})
 
 		$("#diamond").on("click",function(){
 			playerScore = playerScore + diamondNum;
 			console.log("Player Score is " + playerScore);
+			if(playerScore === targetNum){
+				wins = wins + 1;
+				console.log("wins are " + wins);
+				resetGame();
+				newGame();
+							
+			}
+			if (playerScore > targetNum){
+				losses = losses + 1;
+				console.log("losses are " + losses);
+				resetGame();
+				newGame();
+			}	
 		})
 
 		$("#gold").on("click", function(){
 			playerScore = playerScore + goldNum;
 			console.log("Player score is " + playerScore);
+			if(playerScore === targetNum){
+				wins = wins + 1;
+				console.log("wins are " + wins);
+				resetGame();
+				newGame();
+							
+			}
+			if (playerScore > targetNum){
+				losses = losses + 1;
+				console.log("losses are " + losses);
+				resetGame();
+				newGame();
+			}	
 		})
 
 		$("#emerald").on("click", function(){
 			playerScore = playerScore + emeraldNum;
 			console.log("Player score is " + playerScore);
-		})
-
-		
+			if(playerScore === targetNum){
+				wins = wins + 1;
+				console.log("wins are " + wins);
+				resetGame();
+				newGame();
+							
+			}
+			if (playerScore > targetNum){
+				losses = losses + 1;
+				console.log("losses are " + losses);
+				resetGame();
+				newGame();
+			}	
+		})	
 		
 	}	
 
-	
+	var resetGame = function(){
+		 targetNum = 0;
+		 rubyNum = 0;
+		 diamondNum = 0;
+		 goldNum = 0;
+		 emeraldNum = 0;
+	     playerScore = 0;
+
+	}
 
 
 	
