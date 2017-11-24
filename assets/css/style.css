@@ -1,13 +1,24 @@
+.container{
+	border:5px solid black;
+	background-image: url(../../assets/images/503623159.jpg);
 
+	
+
+}
 .row1{
-	height: 50px;
-	width:150px;
-	background-color:peru;
+	height: 75px;
+	width:300px;
+	background-color:#FF5733;
+	color:white;
+
+	
 }
 .instructions{
 	height:300px;
-	width:300px;
-	background-color: blue;
+	width:450px;
+	color: green;
+	background-color: #FFC733;
+	
 }
 
 .col-md-3{
@@ -18,29 +29,80 @@
 }
 .col-md-2{
 	height:75px;
-	width: 50px;
-	background-color: red;
+	width: 125px;
+	background-color: blue;
+
 }
 .gems{
-	height:50px;
+	height:100px;
 	width: 100px;
 	background-color: yellow;
 	border:5px solid black;
+	margin-right: 3px;
 }
 .score{
 	width:200px;
 	height:25px;
 	background-color: black;
+	font-size: 16px;
+	color:white;
+	
 }
 #incrementBox{
 	width:200px;
 	height:125px;
 	background-color: red;
+	color:white;
+	font-size: 50px;
+	text-align: center;
+	
+}
+ul li, ol li {
+     line-height:160%; /*or whatever height you like*/
+     margin-right:1em;
+}
+#target{
+	width:200px;
+	height:100px;
+	background-color: green;
+	font-size: 50px;
+	color:white;
+	text-align: center;
+	margin-right: 3px;
 }
 
+#scoreboard{
+	height:100px;
+	color:white;
+}
+#scoreWins{
+	height:50px;
+	color:white;
+	text-align: center;
 
+}
+#scoreLosses{
+	height:50px;
+	color:white;
+	text-align: center;
+}
+#ruby{
+	
+	background-image: url(../../assets/images/ruby-1.jpg);
+}
+#diamond{
+	background-image: url(../../assets/images/diamond-1.jpg);
+}
+#gold{
+	background-image: url(../../assets/images/images-3.jpg);
+}
 
-
-
+#emerald{
+	background-image: url(../../assets/images/emerald-2.jpg);
+}
+.row{
+	margin-bottom: 3px;
+	margin-left: 3px;
+}
 
 

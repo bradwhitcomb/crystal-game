@@ -23,40 +23,58 @@ $(document).ready(function (){
 		emeraldNum = Math.floor(Math.random() * 12) + 1;
 		console.log(emeraldNum);
 		$("#target").text(targetNum);
-		$("#ruby").append(rubyNum);
-		$("#diamond").append(diamondNum);
-		$("#gold").append(goldNum);
-		$("#emerald").append(emeraldNum);
+		//$("#ruby").append(rubyNum);
+		//$("#diamond").append(diamondNum);
+		//$("#gold").append(goldNum);
+		//$("#emerald").append(emeraldNum);
 		$("#incrementBox").text(playerScore);
 	}
 
 	var playGame = function(){
 		var wins = 0
 		var losses = 0 
+		var net = wins - losses
+		$("#scoreWins").text("Wins " + wins);
+		$("#scoreLosses").text("Losses " + losses);
+		$("#net").text("Net wins and losses "+ net);
+		
+
 		$("#ruby").on("click",function(){
 			playerScore = playerScore + rubyNum;
+			$("#incrementBox").text(playerScore);
 			console.log("Player Score is " + playerScore);	
 			if(playerScore === targetNum){
 				wins = wins + 1;
-				console.log("wins are " + wins);
+				net = wins - losses;
+				$("#scoreWins").text("Wins " + wins);
+				$("#net").text("Net wins and losses "+ net);
+				console.log("net position is "+ net);
 				resetGame();
 				newGame();
 							
 			}
 			if (playerScore > targetNum){
 				losses = losses + 1;
+				net = wins - losses;
+				$("#scoreLosses").text("Losses " + losses);
+				$("#net").text("Net wins and losses "+ net);
 				console.log("losses are " + losses);
 				resetGame();
 				newGame();
 			}	
 
+			
 		})
 
 		$("#diamond").on("click",function(){
 			playerScore = playerScore + diamondNum;
+			$("#incrementBox").text(playerScore);
 			console.log("Player Score is " + playerScore);
 			if(playerScore === targetNum){
 				wins = wins + 1;
+				net = wins - losses;
+				$("#scoreWins").text("Wins " + wins);
+				$("#net").text("Net wins and losses "+ net);
 				console.log("wins are " + wins);
 				resetGame();
 				newGame();
@@ -64,6 +82,9 @@ $(document).ready(function (){
 			}
 			if (playerScore > targetNum){
 				losses = losses + 1;
+				net = wins - losses;
+				$("#scoreLosses").text("Losses " + losses);
+				$("#net").text("Net wins and losses "+ net);
 				console.log("losses are " + losses);
 				resetGame();
 				newGame();
@@ -72,9 +93,13 @@ $(document).ready(function (){
 
 		$("#gold").on("click", function(){
 			playerScore = playerScore + goldNum;
+			$("#incrementBox").text(playerScore);
 			console.log("Player score is " + playerScore);
 			if(playerScore === targetNum){
 				wins = wins + 1;
+				net = wins - losses;
+				$("#scoreWins").text("Wins " + wins);
+				$("#net").text("Net wins and losses "+ net);
 				console.log("wins are " + wins);
 				resetGame();
 				newGame();
@@ -82,6 +107,9 @@ $(document).ready(function (){
 			}
 			if (playerScore > targetNum){
 				losses = losses + 1;
+				net = wins - losses;
+				$("#scoreLosses").text("Losses " + losses);
+				$("#net").text("Net wins and losses "+ net);
 				console.log("losses are " + losses);
 				resetGame();
 				newGame();
@@ -90,9 +118,13 @@ $(document).ready(function (){
 
 		$("#emerald").on("click", function(){
 			playerScore = playerScore + emeraldNum;
+			$("#incrementBox").text(playerScore);
 			console.log("Player score is " + playerScore);
 			if(playerScore === targetNum){
 				wins = wins + 1;
+				net = wins - losses;
+				$("#scoreWins").text("Wins " + wins);
+				$("#net").text("Net wins and losses "+ net);
 				console.log("wins are " + wins);
 				resetGame();
 				newGame();
@@ -100,12 +132,15 @@ $(document).ready(function (){
 			}
 			if (playerScore > targetNum){
 				losses = losses + 1;
+				net = wins - losses;
+				$("#scoreLosses").text("Losses " + losses);
+				$("#net").text("Net wins and losses "+ net);
 				console.log("losses are " + losses);
 				resetGame();
 				newGame();
 			}	
 		})	
-		
+			console.log("FINAL wins "+ wins);
 	}	
 
 	var resetGame = function(){
